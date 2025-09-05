@@ -17,14 +17,13 @@ function Product() {
   return (
     <div>
       <h1>Lista Prodotti</h1>
-      <ul>
+      <ul className="list-unstyled m-5 ">
         {products.map((product) => (
-          <li key={product.id}>
+          <li className="pb-5" key={product.id}>
             <div>
-              <h2>{product.title}</h2>
+              <h4>{product.title}</h4>
               <p>€ {product.price}</p>
-              <img src={product.image}
-                alt={product.title} />
+              <img src={product.image} alt={product.title} style={{ maxWidth: "130px" }} />
             </div>
           </li>
         ))}

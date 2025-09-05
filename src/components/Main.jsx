@@ -6,7 +6,7 @@ function Main() {
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <ul className="list-unstyled">
+            <ul className="list-unstyled navbar">
               <li>
                 <NavLink to="/">Home</NavLink>
               </li>
