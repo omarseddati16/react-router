@@ -15,7 +15,7 @@ function Product() {
   }, []);
 
   return (
-    <div>
+    <div className="d-flex flex-column align-items-center text-center">
       <h1>Lista Prodotti</h1>
       <ul className="list-unstyled m-5 ">
         {products.map((product) => (
