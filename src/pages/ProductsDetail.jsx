@@ -25,14 +25,17 @@ function ProductsDetail() {
       <p>Categoria: {product.category}</p>
 
       <div className="d-flex justify-content-between mt-4">
-        {id != 1 && <button onClick={() => navigate(`/product/${product.id - 1}`)}>
+        <button onClick={() => navigate(`/product/${product.id === 1 ? 20 : product.id - 1}`)
+        }
+        >
           Prodotto Precedente
-        </button>}
+        </button>
 
-        {product.id < 20 && <button onClick={() => navigate(`/product/${product.id + 1}`)}>
+        <button onClick={() => navigate(`/product/${product.id === 20 ? 1 : product.id + 1}`)
+        }
+        >
           Prodotto Successivo
         </button>
-        }
       </div>
     </div >
   )
