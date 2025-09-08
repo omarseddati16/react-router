@@ -10,6 +10,7 @@ function ProductsDetail() {
   const navigate = useNavigate();
 
 
+
   useEffect(() => {
     axios.get(`https://fakestoreapi.com/products/${id}`).then((resp) =>
       setProduct(resp.data))
@@ -24,15 +25,16 @@ function ProductsDetail() {
       <p>Categoria: {product.category}</p>
 
       <div className="d-flex justify-content-between mt-4">
-        <button onClick={() => navigate(`/product/${product.id - 1}`)}>
+        {id != 1 && <button onClick={() => navigate(`/product/${product.id - 1}`)}>
           Prodotto Precedente
-        </button>
+        </button>}
 
-        <button onClick={() => navigate(`/product/${product.id + 1}`)}>
+        {product.id < 20 && <button onClick={() => navigate(`/product/${product.id + 1}`)}>
           Prodotto Successivo
         </button>
+        }
       </div>
-    </div>
+    </div >
   )
 }
 
