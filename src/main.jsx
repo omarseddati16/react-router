@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BudgetProvider } from "./BudgetContext";
+import { BudgetProvider } from "./contexts/BudgetContext.jsx";
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

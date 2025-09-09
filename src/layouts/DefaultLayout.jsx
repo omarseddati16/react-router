@@ -3,14 +3,15 @@ import Main from "../components/Main"
 import { Outlet } from "react-router-dom"
 import Navbar from "./Navbar"
 
-function DefaulLayout() {
+function DefaultLayout() {
   return <>
     <Header />
+    <Navbar />
     <Main />
     <Outlet />
-    <Navbar />
+
   </>
 
 }
 
-export default DefaulLayout
+export default DefaultLayout

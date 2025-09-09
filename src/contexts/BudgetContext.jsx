@@ -1,21 +1,18 @@
 import { createContext, useContext, useState } from "react";
 
-const budgetContext = createContext()
+const FavoriteContext = createContext();
 
-const BudgetProvider = ({ children }) => {
-  const [budgetMode, setBudgetMode] = useState(false)
+export const BudgetProvider = ({ children }) => {
+  const [budgetMode, setBudgetMode] = useState(false);
 
   const onBudgetMode = () => setBudgetMode(true);
-
   const offBudgetMode = () => setBudgetMode(false);
 
   return (
-    <budgetContext.Provider value={{ budgetMode, onBudgetMode, offBudgetMode }}>
+    <FavoriteContext.Provider value={{ budgetMode, onBudgetMode, offBudgetMode }}>
       {children}
-    </budgetContext.Provider>
+    </FavoriteContext.Provider>
   );
 };
 
-export const useBudget = () => {
-  return useContext(budgetContext);
-};
+export const useBudget = () => useContext(FavoriteContext);
