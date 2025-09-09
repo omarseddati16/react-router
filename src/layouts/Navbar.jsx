@@ -9,7 +9,7 @@ function Navbar() {
         className="btn btn-primary"
         onClick={budgetMode ? offBudgetMode : onBudgetMode}
       >
-        Modalità Budget
+        {budgetMode ? "Disattiva Modalità Budget" : " Attiva Modalità Budget"}
       </button>
     </div>
   )

@@ -16,8 +16,8 @@ function ProductsDetail() {
       setProduct(resp.data))
   }, [id]);
 
-  const less = products.id === 1 ? 20 : product.id - 1
-  const more = products.id === 20 ? 1 : product.id + 1
+  const less = product.id === 1 ? 20 : product.id - 1
+  const more = product.id === 20 ? 1 : product.id + 1
 
   return (
     <div className="d-flex flex-column align-items-center text-center">
